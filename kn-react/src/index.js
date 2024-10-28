@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {BrowserRouter, Routes, Route} from "react-router-dom"; //Router tools that routes people to different pages as needed.
+import {BrowserRouter, Routes, Route, useLocation} from "react-router-dom";
 import './css/index.css';
 import Layout from './Layout';
 import MainPage from './pages/MainPage';
@@ -12,6 +12,8 @@ import Support from './pages/Support';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const App = () => {
+  //useConditionalClass();
+
   return (
     <BrowserRouter>
       <Routes>
@@ -30,3 +32,17 @@ const App = () => {
 root.render(
     <App />
 );
+
+/*
+const useConditionalClass = () => {
+  const location = useLocation();
+  const rootElement = document.getElementById('root');
+
+  // Apply "long" class if not Layout or MainPage
+  if (location.pathname !== '/') {
+    rootElement.classList.add('long');
+  } else {
+    rootElement.classList.remove('long');
+  }
+};
+*/

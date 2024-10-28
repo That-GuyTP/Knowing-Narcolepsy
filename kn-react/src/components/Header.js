@@ -1,9 +1,9 @@
-import "../css/Header.css"
+import "../css/Header.css";
 
 const Header = () => {
     return (
         <header>
-            <h1>My Excellent Site</h1>
+            <p>Header is here.</p>
         </header>
     );
 };

@@ -79,41 +79,41 @@ div {
 
 @media only screen and (min-width:600px) {
   #main-html {
-      max-width:60%;
-      margin:auto;
+    max-width:60%;
+    margin:auto;
   }
 
   .columns {
-      display:flex;
+    display:flex;
   }
 
   .columns .one button {
-      display: block;
-      margin: auto; /* add some margin between buttons */
-      margin-bottom: 10px;
-      font-size:20px;
+    display: block;
+    margin: auto; /* add some margin between buttons */
+    margin-bottom: 10px;
+  font-size:20px;
   }
 
   .life-list {
-      font-size:20px;
+    font-size:20px;
   }
 
   .button-container {
-      margin-top:40px;
+    margin-top:40px;
   }
 
   .one {
-      flex:1;
+    flex:1;
   }
 
   .two {
-      flex:2;
-      text-align:left;
+    flex:2;
+    text-align:left;
   }
 
   .three {
-      flex:3;
-      text-align:left;
-      text-align: top;
+    flex:3;
+    text-align:left;
+    text-align: top;
   }
 }

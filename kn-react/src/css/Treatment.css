@@ -1,0 +1,67 @@
+/* Treatment */
+#life-list-container {
+    background-color: var(--bckgrd-color);
+}
+
+#life-list{
+    text-align: left;
+    font-size:25px;
+}
+
+#life-list li {
+    text-decoration: none;
+}
+
+#lifelist div{
+    margin:10px;
+}
+
+.lifestyle-img {
+    margin-top: 15px;
+    max-width: 100%;
+    margin-bottom:5px;
+}
+
+/* Buttons */
+.isClicked {
+    background: var(--sec-color);
+    color: var(--prim-color);
+    border: 1px solid var(--sec-color);
+    border-radius: 3px;
+}
+
+.notClicked {
+    background: var(--prim-color);
+    color:var(--nav-color);
+    border: 1px solid var(--nav-color);
+    border-radius: 3px;
+}
+
+.button-container {
+    margin-bottom:10px;
+    font-size:15px;
+}
+
+@media only screen and (min-width:600px) {
+    /* Treatment */
+    .life-list {
+        display:flex;
+        flex-wrap:wrap;
+        background-color: var(--bckgrd-color);
+    }
+    
+    .lifestyle-img {
+        margin-top: 15px;
+        width: 400px;
+        height: 300px;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom:5px;
+    }
+
+    .life-list-item {
+        margin:5px;
+        flex:40%;
+    }
+}
