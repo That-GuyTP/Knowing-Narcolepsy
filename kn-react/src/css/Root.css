@@ -36,8 +36,8 @@ body {
     align-items: center;
     color:var(--sec-color);
     font-family: 'website-font';
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-x: visible;
+    overflow-y: visible;
 }
 
 p {
@@ -76,6 +76,7 @@ div {
     height:100vh;
     overflow:hidden;
 }
+
 
 @media only screen and (min-width:600px) {
     #main-html {

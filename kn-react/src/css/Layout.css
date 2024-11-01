@@ -36,8 +36,8 @@ body {
   align-items: center;
   color:var(--sec-color);
   font-family: 'website-font';
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-x:visible; /* TEst */
+  overflow-y: visible; /* test */
 }
 
 p {
@@ -91,7 +91,7 @@ div {
     display: block;
     margin: auto; /* add some margin between buttons */
     margin-bottom: 10px;
-  font-size:20px;
+   font-size:20px;
   }
 
   .life-list {

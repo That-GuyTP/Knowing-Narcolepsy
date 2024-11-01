@@ -1,0 +1,46 @@
+/* NAVIGATION */
+#nav {
+    display:inline-flex;
+    text-align:center;
+    justify-content:center;
+    width:100%;
+}
+
+#nav ul{
+    padding:5px;
+    display:inline-flex;
+    text-align:center;
+    list-style:none;
+}
+  
+#nav li{
+    list-style-type: none;
+    padding:5px;
+}
+  
+#nav ul li:not(:last-child):after {
+    content: " | ";
+    color: var(--nav-color);
+    text-decoration: solid;
+}
+  
+#nav a {
+    text-decoration: none;
+    color:var(--nav-color);
+}
+  
+#nav a:hover {
+    background-color:var(--bckgrd-color);
+    color:var(--sec-color);
+}
+  
+#nav {
+    position:relative;
+    top:-30px;
+}
+
+@media only screen and (min-width:600px) {
+    #nav {
+        top: -10px; /*Why this no work*/
+    }
+}

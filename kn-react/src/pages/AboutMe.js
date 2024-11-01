@@ -1,13 +1,15 @@
 import "../css/Root.css";
 import "../css/AboutMe.css";
+import Navigation from "../components/Navigation";
 import Self from "../images/AboutMe.jpg";
 
 const AboutMe = () => {
     return (
         <>
         <h1>About Me</h1>
+        <Navigation />
         <div id="bio">
-            <img id="portrait" class="center" src={Self} alt="A portrait of myself"></img>
+            <img id="portrait" className="center" src={Self} alt="A portrait of myself"></img>
             <p> I'm Thomas Peterson. A senior at USC majoring in CIS. In December 2022 I was diagnosed with Narcolepsy Type II. My daytime sleep test showed that I entered REM 2/5 times I took a nap
                 meaning I was legally a narcoleptic. I would later develop Narcolepsy Type I with mild cataplexy. Since then I've been trying to find the best ways to relieve Narcolepsy symptoms and 
                 finding others who also have it.

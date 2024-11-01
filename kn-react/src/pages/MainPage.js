@@ -2,6 +2,7 @@ import "../css/MainPage.css";
 import "../css/Root.css";
 import Map from "../images/UsNarcMap.png";
 import React, { useEffect } from 'react';
+import Navigation from "../components/Navigation";
 //import { generateStars } from "../scripts/Stars.js";
 
 const MainPage = () => {
@@ -15,8 +16,11 @@ const MainPage = () => {
         <>
         <meta charset="UTF-8"></meta>
         <h1>Knowing Nar&ensp;&ensp;olepsy</h1>
-        <section id="moon" class="crescent-moon"></section>
-        <section id="hill-night" class="hill"></section>
+        <Navigation />
+        <section id="moon" className="crescent-moon"></section>
+        <section id="hill-night">
+            <section id="hill"></section>
+        </section>
         <h1 id="quote"><i>"Narcolepsy is a medical disorder that impacts 1 in approximately 2,000 people in the United States of America."</i> - Narcolepsy Network</h1>
         <div id="div-intro">
             <h2>What is Narcolepsy?</h2>

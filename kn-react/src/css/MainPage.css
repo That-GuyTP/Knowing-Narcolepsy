@@ -63,7 +63,7 @@
 }
 
 /* Hill */
-.hill {
+#hill {
     position:absolute;
     z-index:-1;
     height: 1000px;
@@ -72,6 +72,12 @@
     border-radius: 50%;
     right:-260px;
     bottom:-320px;
+    overflow:hidden;
+}
+
+#hill-night {
+    background-color:none;
+    overflow: hidden;
 }
 
 @media only screen and (min-width:600px) {
@@ -134,7 +140,7 @@
         bottom:100px;
     }
 
-    .hill {
+    #hill {
         width:2000px;
         height:1900px;
         top:300px;

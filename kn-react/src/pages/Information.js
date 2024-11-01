@@ -1,5 +1,6 @@
 import "../css/Root.css";
 import "../css/Information.css";
+import Navigation from "../components/Navigation";
 import Default from "../images/Info_Both.png";
 import Narc from "../images/Info_Narc.png";
 import Norm from "../images/Info_Normal.png";
@@ -8,6 +9,7 @@ const Information = () => {
     return (
         <>
         <h1>Information</h1>
+        <Navigation />
         <div id="sci-info">
             <h2>What's The Science Behind Narcolepsy?</h2>
             <p> It's important to understand that there are two types of narcolepsy: Type I Narcolepsy which includes cataplexy and Type II Narcolepsy which is without cataplexy.
@@ -33,15 +35,15 @@ const Information = () => {
         </div>
         <div id="chart">
             <h2>Sleep Cycle Comparison</h2>
-            <section class="columns">
-                <section class="one">
-                    <section class="button-container">
+            <section className="columns">
+                <section className="one">
+                    <section className="button-container">
                         <button id="normal" class="notClicked">Normal</button>
                         <button id="narcoleptic" class="notClicked">Narcoleptic</button>
                         <button id="both" class="isClicked">Both</button>
                     </section>
                 </section>
-                <section class="three">
+                <section className="three">
                     <img id="chart-img" src={Default} alt="A chart depicting the sleep cycles of a narcoleptic vs a normal person."></img>
                     <p id="copyright">Copyright - https://bidmcneurology.org/education-programs/harvard-bidmc-neurology-fellowship-training-programs/sleep-disorders/</p>
                 </section>

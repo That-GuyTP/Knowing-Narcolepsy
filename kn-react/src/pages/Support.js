@@ -1,5 +1,6 @@
 import "../css/Root.css";
 import "../css/Support.css";
+import Navigation from "../components/Navigation";
 import NarcolepsyNetwork from "../images/Support_NarcolepsyNetwork.png";
 import KnowNarcolepsy from "../images/Support_KnowNarcolepsy.png";
 import Reddit from "../images/Support_Reddit.png";
@@ -9,6 +10,7 @@ const Support = () => {
     return (
         <>
         <h1>Support</h1>
+        <Navigation />
         <div>
             <form id="form-email" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="15d2a7d7-a1e7-4622-b5fa-74c4454f2692"/>

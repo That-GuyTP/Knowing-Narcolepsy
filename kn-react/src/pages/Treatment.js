@@ -1,5 +1,6 @@
 import "../css/Root.css";
 import "../css/Treatment.css";
+import Navigation from "../components/Navigation";
 import Sleep from "../images/Treatment_Sleep.png";
 import Diet from "../images/Treatment_Diet.png";
 import Nap from "../images/Treatment_Nap.jpg";
@@ -10,6 +11,7 @@ const Treatment = () => {
     return (
         <>
         <h1>Treatment</h1>
+        <Navigation />
         <div>
             <h2>Treatment</h2>
             <p>Sadly Narcolepsy does not currently have a cure. While it can be treated, it is a life long condition and will take a lot of patience and time
