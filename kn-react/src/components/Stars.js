@@ -12,8 +12,8 @@ const generateStars = () => {
             star.className = "star";
             star.innerHTML = "★";
     
-            star.style.top = `${Math.random() * pageHeight}px`;
-            star.style.left = `${Math.random() * pageWidth}px`;
+            star.style.top = `${Math.random() * (pageHeight - 50)}px`;
+            star.style.left = `${Math.random() * (pageWidth - 50)}px`;
             document.body.append(star);
         }
     }

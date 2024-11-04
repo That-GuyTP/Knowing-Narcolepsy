@@ -1,11 +1,7 @@
 import "../css/MainPage.css";
 import "../css/Root.css";
-import {useLocation} from "react-router-dom";
-import { useEffect } from 'react';
 import Map from "../images/mainpage/USNarcMap.png";
-//import React, { useEffect } from 'react';
 import Navigation from "../components/Navigation";
-//import { generateStars } from "../scripts/Stars.js";
 
 const MainPage = () => {
     return (
