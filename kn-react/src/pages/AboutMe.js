@@ -1,7 +1,7 @@
 import "../css/Root.css";
 import "../css/AboutMe.css";
 import Navigation from "../components/Navigation";
-import Self from "../images/AboutMe.jpg";
+import Self from "../images/about_me/AboutMe.jpg";
 
 const AboutMe = () => {
     return (

@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter, Routes, Route, useLocation} from "react-router-dom";
-import './css/index.css';
+import { useEffect } from 'react';
+import './css/Root.css';
 import Layout from './Layout';
 import MainPage from './pages/MainPage';
 import AboutMe from './pages/AboutMe';
@@ -12,8 +13,6 @@ import Support from './pages/Support';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const App = () => {
-  //useConditionalClass();
-
   return (
     <BrowserRouter>
       <Routes>

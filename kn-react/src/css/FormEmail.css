@@ -1,0 +1,31 @@
+/* Support */
+.user-info {
+    width:270px;
+    height:30px;
+    font-style:italic;
+    color:var(--input-color);
+}
+
+section.one {
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Horizontally center the images (if needed) */
+    align-items: center; /* Vertically center the images */
+    height:100%;
+}
+
+#form-email-inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+}
+
+#form-email-inputs input {
+    margin:10px;
+}
+
+#form-email button {
+    display:flex;
+    justify-content: center;
+    margin:auto;
+}

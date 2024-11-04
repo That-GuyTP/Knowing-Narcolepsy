@@ -1,9 +1,7 @@
 import "../css/Root.css";
 import "../css/Information.css";
 import Navigation from "../components/Navigation";
-import Default from "../images/Info_Both.png";
-import Narc from "../images/Info_Narc.png";
-import Norm from "../images/Info_Normal.png";
+import Chart from "../components/Chart";
 
 const Information = () => {
     return (
@@ -33,22 +31,7 @@ const Information = () => {
             </ul>
             <p>Feel free to ask me about any of these!</p>
         </div>
-        <div id="chart">
-            <h2>Sleep Cycle Comparison</h2>
-            <section className="columns">
-                <section className="one">
-                    <section className="button-container">
-                        <button id="normal" class="notClicked">Normal</button>
-                        <button id="narcoleptic" class="notClicked">Narcoleptic</button>
-                        <button id="both" class="isClicked">Both</button>
-                    </section>
-                </section>
-                <section className="three">
-                    <img id="chart-img" src={Default} alt="A chart depicting the sleep cycles of a narcoleptic vs a normal person."></img>
-                    <p id="copyright">Copyright - https://bidmcneurology.org/education-programs/harvard-bidmc-neurology-fellowship-training-programs/sleep-disorders/</p>
-                </section>
-            </section>
-        </div>
+        <Chart />
         <script src="scripts.js"></script>
         </>
     );

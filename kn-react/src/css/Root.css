@@ -23,7 +23,8 @@
 }
 
 .long {
-    overflow-y:visible;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 /* FORMAT & STYLES*/
@@ -36,8 +37,6 @@ body {
     align-items: center;
     color:var(--sec-color);
     font-family: 'website-font';
-    overflow-x: visible;
-    overflow-y: visible;
 }
 
 p {
@@ -93,14 +92,6 @@ div {
         margin: auto; /* add some margin between buttons */
         margin-bottom: 10px;
         font-size:20px;
-    }
-
-    .life-list {
-        font-size:20px;
-    }
-
-    .button-container {
-        margin-top:40px;
     }
 
     .one {

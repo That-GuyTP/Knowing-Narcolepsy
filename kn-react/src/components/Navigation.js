@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import {useState} from "react";
+//import {useState} from "react";
 import "../css/Navigation.css";
 
 
@@ -23,11 +23,13 @@ const Navigation = () => {
     return (
         <>
         <nav id="nav">
-            <li><Link to="/">Main Page</Link></li>
-            <li><Link to="/AboutMe">About Me</Link></li>
-            <li><Link to="/Information">Information</Link></li>
-            <li><Link to="/Treatment">Treatment</Link></li>
-            <li><Link to="/Support">Support</Link></li>
+            <ul>
+                <li><Link to="/">Main Page</Link></li>
+                <li><Link to="/AboutMe">About Me</Link></li>
+                <li><Link to="/Information">Information</Link></li>
+                <li><Link to="/Treatment">Treatment</Link></li>
+                <li><Link to="/Support">Support</Link></li>
+            </ul>
         </nav>
         </>
     );

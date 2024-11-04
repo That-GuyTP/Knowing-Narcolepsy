@@ -1,20 +1,35 @@
 /* Main Page */
-#div-intro {
-    background:none;
-}
-
-#portrait {
-    width: 400px;
-    height: 300px;
-    display:block;
-    margin:auto;
-}
-
 #quote {
     font-size:20px;
     color:var(--nav-color);
-    position:relative;
-    top:-40px;
+}
+
+#div-mainpage {
+    background-image: url(../images/mainpage/background.png);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    margin:0;
+    padding:0;
+}
+
+#div-maincontent {
+    z-index: 1;
+}
+
+#div-intro {
+    margin:auto;
+}
+
+#div-img {
+    display:block;
+    margin:auto;
+    width:fit-content;
+}
+
+#img-intro-container {
+    vertical-align:top;
+    display:inline-block;
+    text-align:left;
 }
 
 #img-intro {
@@ -46,23 +61,29 @@
 
 #moon {
     position:relative;
-    left: 280px;
-    bottom:65px;
+    left:288px;
+    bottom:970px;
     animation: rise 1.7s ease-out forwards;
-    z-index:-100;
+    z-index:0;
 }
+
 
 @keyframes rise {
     0% {
-        bottom: -150px;
+        bottom: 850px;
     }
 
     100% {
-        bottom: 65px;
+        bottom: 970px;
     }
 }
 
 /* Hill */
+#hill-container {
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
 #hill {
     position:absolute;
     z-index:-1;
@@ -72,7 +93,8 @@
     border-radius: 50%;
     right:-260px;
     bottom:-320px;
-    overflow:hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 #hill-night {
@@ -90,54 +112,42 @@
         top:-100px;
     }
 
-    .nav {
-        position:relative;
-        top:-30px;
-    }
-
-    #div-intro {
-        position:relative;
-        bottom:10px;
-        left:160px;
+    #div-maincontent {
         max-width:70%;
+        align-content: center;
+        margin:auto;
     }
 
-    #div-img {
-        position:relative;
-        bottom:-100px;
-        margin-bottom:5px;
-    }
 
-    #quote {
-        position:relative;
-        top:-70px;
+    #img-intro-container {
+        vertical-align:top;
+        display:inline-block;
+        text-align:left;
+        margin: auto;
     }
 
     #img-intro {
-        position:relative;
-        bottom:145px;
         max-width:60%;
+        min-width:100%;
         height:390px;
-        display:block;
-        margin-left:auto;
-        margin-right:auto;
         overflow-y:visible;
         z-index: 1;
     }
 
     @keyframes rise {
         0% {
-            bottom: -150px;
+            bottom: 890px;
         }
     
         100% {
-            bottom: 110px;
+            bottom: 950px;
         }
     }
 
     #moon {
+        position:relative;
         left: 651px;
-        bottom:100px;
+        bottom:120px;
     }
 
     #hill {

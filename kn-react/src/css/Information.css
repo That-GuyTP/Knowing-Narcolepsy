@@ -15,30 +15,3 @@
 .block {
     display:flex;
 }
-
-#chart-img {
-    margin-top:5px;
-    max-height:100%;
-    max-width:100%;
-    margin-bottom:5px;
-}
-
-#long {
-    overflow-y:visible;
-}
-
-#buttons {
-    padding-left:0px;
-}
-
-#buttons li{
-    display:inline-block;
-    list-style-type: none;
-}
-
-@media only screen and (min-width:600px) {
-    /* Info */
-    #button{ /* Can't seem to get these guys to vertically align. */
-        display:none;
-    }
-}
