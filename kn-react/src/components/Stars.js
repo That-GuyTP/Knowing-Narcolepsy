@@ -1,6 +1,3 @@
-function getRandomPosition(min, max) {
-    return Math.random() * (max - min) + min;
-};
 
 const pageHeight = document.documentElement.scrollHeight;
 const pageWidth = document.documentElement.scrollWidth;
