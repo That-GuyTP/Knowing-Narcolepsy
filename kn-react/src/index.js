@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {BrowserRouter, Routes, Route, useLocation} from "react-router-dom";
-import { useEffect } from 'react';
+import {BrowserRouter, Routes, Route, /* useLocation */} from "react-router-dom";
+//import { useEffect } from 'react';
 import './css/Root.css';
 import Layout from './Layout';
 import MainPage from './pages/MainPage';
