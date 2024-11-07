@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/Knowing-Narcolepsy/static/css/main.d3a3f5d7.css",
-    "main.js": "/Knowing-Narcolepsy/static/js/main.9a31069d.js",
-    "static/media/AboutMe.jpg": "/Knowing-Narcolepsy/static/media/AboutMe.a4e05c7eeb09de0ca74e.jpg",
-    "static/media/nap.jpg": "/Knowing-Narcolepsy/static/media/nap.a281ce31dffc6e364380.jpg",
-    "static/media/USNarcMap.png": "/Knowing-Narcolepsy/static/media/USNarcMap.141eb525e6cab454785d.png",
-    "static/media/sleep.png": "/Knowing-Narcolepsy/static/media/sleep.bdcb99f07e61dccfd5d0.png",
-    "static/media/findYourself.jpg": "/Knowing-Narcolepsy/static/media/findYourself.f291bee7f8b9bab2dc02.jpg",
-    "static/media/diet.png": "/Knowing-Narcolepsy/static/media/diet.006417cf44e3c4225262.png",
-    "static/media/both.png": "/Knowing-Narcolepsy/static/media/both.620c5f157eafdf01c6aa.png",
-    "static/media/reachOut.png": "/Knowing-Narcolepsy/static/media/reachOut.6ba12962462cdd359b94.png",
-    "static/media/narcoleptic.png": "/Knowing-Narcolepsy/static/media/narcoleptic.1f8a8e332165eb3b75d0.png",
-    "static/media/normal.png": "/Knowing-Narcolepsy/static/media/normal.efe0c60f3734765e2973.png",
-    "static/media/NarcolepsyNetwork.png": "/Knowing-Narcolepsy/static/media/NarcolepsyNetwork.b36bf8de2afd86eef984.png",
-    "static/media/background.png": "/Knowing-Narcolepsy/static/media/background.03dacd4315dbd5cb3bd9.png",
-    "static/media/Reddit.png": "/Knowing-Narcolepsy/static/media/Reddit.8ab0e9e67dc03b99bfe8.png",
-    "index.html": "/Knowing-Narcolepsy/index.html",
-    "main.d3a3f5d7.css.map": "/Knowing-Narcolepsy/static/css/main.d3a3f5d7.css.map",
-    "main.9a31069d.js.map": "/Knowing-Narcolepsy/static/js/main.9a31069d.js.map"
+    "main.css": "./static/css/main.e734e484.css",
+    "main.js": "./static/js/main.e23cbb47.js",
+    "static/media/AboutMe.jpg": "./static/media/AboutMe.a4e05c7eeb09de0ca74e.jpg",
+    "static/media/nap.jpg": "./static/media/nap.a281ce31dffc6e364380.jpg",
+    "static/media/USNarcMap.png": "./static/media/USNarcMap.141eb525e6cab454785d.png",
+    "static/media/sleep.png": "./static/media/sleep.bdcb99f07e61dccfd5d0.png",
+    "static/media/findYourself.jpg": "./static/media/findYourself.f291bee7f8b9bab2dc02.jpg",
+    "static/media/diet.png": "./static/media/diet.006417cf44e3c4225262.png",
+    "static/media/both.png": "./static/media/both.620c5f157eafdf01c6aa.png",
+    "static/media/reachOut.png": "./static/media/reachOut.6ba12962462cdd359b94.png",
+    "static/media/narcoleptic.png": "./static/media/narcoleptic.1f8a8e332165eb3b75d0.png",
+    "static/media/normal.png": "./static/media/normal.efe0c60f3734765e2973.png",
+    "static/media/NarcolepsyNetwork.png": "./static/media/NarcolepsyNetwork.b36bf8de2afd86eef984.png",
+    "static/media/background.png": "./static/media/background.03dacd4315dbd5cb3bd9.png",
+    "static/media/Reddit.png": "./static/media/Reddit.8ab0e9e67dc03b99bfe8.png",
+    "index.html": "./index.html",
+    "main.e734e484.css.map": "./static/css/main.e734e484.css.map",
+    "main.e23cbb47.js.map": "./static/js/main.e23cbb47.js.map"
   },
   "entrypoints": [
-    "static/css/main.d3a3f5d7.css",
-    "static/js/main.9a31069d.js"
+    "static/css/main.e734e484.css",
+    "static/js/main.e23cbb47.js"
   ]
 }
