@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {BrowserRouter, Routes, Route, useLocation} from "react-router-dom";
-import { useEffect } from 'react';
+import {BrowserRouter, Routes, Route, /*useLocation*/} from "react-router-dom";
+//import { useEffect } from 'react';
 import './css/Root.css';
 import Layout from './Layout';
 import MainPage from './pages/MainPage';
@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const App = () => {
   return (
-    <BrowserRouter basename={ProcessingInstruction.env.PUBLIC_URL}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={(<Layout />)} >
           <Route index element={(<MainPage />)} />

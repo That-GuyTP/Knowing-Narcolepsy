@@ -6,8 +6,7 @@ import Navigation from "../components/Navigation";
 const MainPage = () => {
     return (
         <>
-        <div id="div-mainpage">
-            <meta charset="UTF-8"></meta>
+            <meta charSet="UTF-8"></meta>
             <h1>Knowing Nar&ensp;&ensp;olepsy</h1>
             <Navigation />
             <h1 id="quote"><i>"Narcolepsy is a medical disorder that impacts 1 in approximately 2,000 people in the United States of America."</i> - Narcolepsy Network</h1>
@@ -27,7 +26,6 @@ const MainPage = () => {
                 </div>
             </div>
             <section id="moon" class="crescent-moon"></section>
-        </div>
         </> 
     );
 };
