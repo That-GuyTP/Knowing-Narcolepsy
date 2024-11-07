@@ -1,8 +1,5 @@
 {
   "dependencies": {
     "react-router-dom": "^6.27.0"
-  },
-  "devDependencies": {
-    "gh-pages": "^6.2.0"
   }
 }
