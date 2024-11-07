@@ -1,0 +1,47 @@
+.isClicked {
+    background: var(--sec-color);
+    color: var(--prim-color);
+    border: 1px solid var(--sec-color);
+    border-radius: 3px;
+}
+
+.notClicked {
+    background: var(--prim-color);
+    color:var(--nav-color);
+    border: 1px solid var(--nav-color);
+    border-radius: 3px;
+}
+
+#button-container {
+    margin-bottom:10px;
+}
+
+#button-container button {
+    margin:10px;
+    min-width:80px;
+    min-height:30px;
+    font-size:25px;
+}
+
+#chart-img-container {
+    vertical-align:top;
+    display:inline-block;
+    text-align:left;
+}
+
+#chart-img {
+    margin-left:0;
+    margin-top:5px;
+    max-height:100%;
+    max-width:100%;
+    margin-bottom:5px;
+}
+
+@media only screen and (max-width:600px) {
+    #button-container button {
+        margin:5px;
+        min-width:70px;
+        min-height:30px;
+        font-size:15px;
+    }
+}

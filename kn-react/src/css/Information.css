@@ -1,0 +1,17 @@
+/* Information */
+#symp-list{
+    font-size:19px;
+    text-align:left;
+}
+
+#symp-list li{
+    padding:7px;
+}
+
+#copyright {
+    font-size:10px;
+}
+
+.block {
+    display:flex;
+}
