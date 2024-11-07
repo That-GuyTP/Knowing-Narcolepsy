@@ -1,5 +1,5 @@
 {
-  "homepage": "../kn-react",
+  "homepage": "./kn-react",
   "name": "kn-react",
   "version": "0.1.0",
   "private": false,
