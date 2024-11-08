@@ -33,7 +33,7 @@ const SuccessStories = () => {
             <div id="success-stories">
                 {stories.map((story)=>(
                     <Story
-                        img={Images[story.first_name]}
+                        img={Images[story.first_name + ".jpg"]}
                         firstName={story.first_name}
                         lastName={story.last_name}
                         diagnosed={story.date_diagnosed}
