@@ -1,4 +1,3 @@
-import "../css/Root.css";
 import "../css/Treatment.css";
 import Navigation from "../components/Navigation";
 import LifeList from "../components/LifeList";
@@ -10,7 +9,7 @@ const Treatment = () => {
         <>
         <h1>Treatment</h1>
         <Navigation />
-        <div>
+        <div className="div-content"> 
             <h2>Treatment</h2>
             <p>Sadly Narcolepsy does not currently have a cure. While it can be treated, it is a life long condition and will take a lot of patience and time
                 to learn how to manage life with. The best recommendation is to visit a trusted Sleep Doctor to assist with providing medical solutions. 
@@ -21,7 +20,7 @@ const Treatment = () => {
                 used for awake are Lisdexafetamine, Dextroamphetamine, Methylphenidate, & Modafinil. For sleeping solutions the most used are Melatonin, Xywav, and Xyrem.
             </p>
         </div>
-        <LifeList />
+        <LifeList/>
         <SuccessStories />
         </>
     );

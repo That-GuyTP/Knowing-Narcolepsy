@@ -27,6 +27,10 @@
     overflow-y: hidden;
 }
 
+.main-page {
+    overflow:hidden;
+}
+
 /* FORMAT & STYLES*/
 #main-html {
     background-color:var(--bckgrd-color);
@@ -83,8 +87,20 @@ div {
 
 @media only screen and (min-width:600px) {
     #main-html {
+        /*max-width:60%;*/
+        margin:auto;
+    }
+
+    .main-page {
+        overflow:hidden;
+    }
+
+    .div-content {
         max-width:60%;
         margin:auto;
+        padding: 12px;
+        margin-bottom:10px;
+        border-radius:3px;
     }
 
     .columns {

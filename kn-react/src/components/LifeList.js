@@ -12,7 +12,7 @@ const LifeList = () => {
                 <h2>Lifestyle Changes</h2>
                 <p>While Narcolespy may be uncurable there are many things you can do without the need of medicine to help manage your conditions:</p>
             </div>
-            <div class="life-list">
+            <div id="life-list">
                 <div class="life-list-item">
                     <img src={Sleep} alt="A stock of someone sleeping" class="lifestyle-img"></img>
                     <p><b>Maintain a Regular Sleep Schedule</b> - The best thing someone who suffers from narcolepsy can do is maintain a regular sleep schedule as best they can. Go to sleep at the same time and wake up at the same time. This can help reduce daytime sleepiness and control one's sleep cycle.</p>

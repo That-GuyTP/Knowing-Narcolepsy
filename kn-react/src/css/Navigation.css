@@ -29,7 +29,7 @@
     color: var(--nav-color);
     width: fit-content;
     padding: 1px 3px;
-    margin-bottom:2px;
+    margin-bottom:10px;
 }
 
 #toggle div {

@@ -1,4 +1,3 @@
-import "../css/Root.css";
 import "../css/Information.css";
 import Navigation from "../components/Navigation";
 import Chart from "../components/Chart";
@@ -8,7 +7,7 @@ const Information = () => {
         <>
         <h1>Information</h1>
         <Navigation />
-        <div id="sci-info">
+        <div id="sci-info" className="div-content">
             <h2>What's The Science Behind Narcolepsy?</h2>
             <p> It's important to understand that there are two types of narcolepsy: Type I Narcolepsy which includes cataplexy and Type II Narcolepsy which is without cataplexy.
                 While cataplexy comes in many forms, it's most common form is the sudden loss of control of the body because the brain sending signals to fall asleep. The reason narcoleptics struggle with their sleep is because
@@ -17,7 +16,7 @@ const Information = () => {
                 as to what causes someone to develop narcolepsy. The most common theories are genetics (still unconfirmed), chronic strep throat, head injuries, emotional truama, and brain disorders.
             </p>
         </div>
-        <div id="Symp">
+        <div id="Symp" className="div-content">
             <h2>Symptoms</h2>
             <p>The Symptoms of Narcolepsy can include any of the following:</p>
             <ul id="symp-list">
@@ -31,8 +30,9 @@ const Information = () => {
             </ul>
             <p>Feel free to ask me about any of these!</p>
         </div>
-        <Chart />
-        <script src="scripts.js"></script>
+        <div className="div-content">
+            <Chart />
+        </div>
         </>
     );
 };

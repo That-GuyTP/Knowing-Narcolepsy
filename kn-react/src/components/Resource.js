@@ -2,13 +2,13 @@ import "../components/Resources";
 
 const Resource = (resource) => {
     return (
-        <section class="columns">
-            <section class="one">
+        <section className="columns">
+            <section className="one">
                 <a href={resource.websiteLink} target="_blank" rel="noreferrer">
-                <img class="support-img" href={resource.websiteLink} src={resource.image} alt={resource.image}></img>
+                <img className="support-img" href={resource.websiteLink} src={resource.image} alt={resource.image}></img>
                 </a>
             </section>
-            <section class="three">
+            <section className="three">
                 <p>{resource.description}</p>
             </section>
         </section>

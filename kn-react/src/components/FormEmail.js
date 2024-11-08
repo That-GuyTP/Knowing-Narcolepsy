@@ -2,7 +2,7 @@ import "../css/FormEmail.css";
 
 const Form_Email = () => {
     return (
-        <div>
+        <div className="div-content">
             <h2>Email</h2>
             <form id="form-email" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="15d2a7d7-a1e7-4622-b5fa-74c4454f2692"/>

@@ -1,4 +1,3 @@
-import "../css/Root.css";
 import "../css/AboutMe.css";
 import Navigation from "../components/Navigation";
 import Self from "../images/about_me/AboutMe.jpg";
@@ -8,14 +7,14 @@ const AboutMe = () => {
         <>
         <h1>About Me</h1>
         <Navigation />
-        <div id="bio">
+        <div id="bio" className="div-content">
             <img id="portrait" className="center" src={Self} alt="A portrait of myself"></img>
             <p> I'm Thomas Peterson. A senior at USC majoring in CIS. In December 2022 I was diagnosed with Narcolepsy Type II. My daytime sleep test showed that I entered REM 2/5 times I took a nap
                 meaning I was legally a narcoleptic. I would later develop Narcolepsy Type I with mild cataplexy. Since then I've been trying to find the best ways to relieve Narcolepsy symptoms and 
                 finding others who also have it.
             </p>
         </div>
-        <div>
+        <div className="div-content">
             <h2>Website Purpose</h2>
             <p> During my CSCE 242 class we were assigned a main website project
                 which I took as the chance to set up a Narcolepsy website that people could use to find out more information. I noticed that most narcolepsy websites are very bland or strictly informal
@@ -23,7 +22,7 @@ const AboutMe = () => {
                 can from the website when they view it.
             </p>
         </div>
-        <div>
+        <div className="div-content">
             <h2>My Socials</h2>
             <ul id="socials-list">
                 <li>FakeEmail@email.com</li>
@@ -32,7 +31,6 @@ const AboutMe = () => {
                 <li>fake facebook</li>
             </ul>
         </div>
-        <script src="scripts.js"></script>
         </>
     );
 };

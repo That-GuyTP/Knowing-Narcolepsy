@@ -1,0 +1,12 @@
+.support-img {
+    margin-right:5px;
+    margin-bottom:10px;
+    width:100%;
+    display:block;
+}
+
+@media only screen and (min-width:600px) {
+    .three p {
+        margin-left:10px;
+    }
+}

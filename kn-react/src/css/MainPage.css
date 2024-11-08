@@ -1,7 +1,11 @@
-/* Main Page */
 #quote {
     font-size:20px;
     color:var(--nav-color);
+}
+
+#main-page-container {
+    position:relative;
+    height:auto;
 }
 
 #div-mainpage {
@@ -14,6 +18,9 @@
 
 #div-maincontent {
     z-index: 1;
+    position: relative;
+    bottom: -100px;
+    height:auto;
 }
 
 #div-intro {
@@ -61,29 +68,23 @@
 
 #moon {
     position:relative;
-    left:288px;
-    bottom:970px;
+    left:7px;
     animation: rise 1.7s ease-out forwards;
-    z-index:0;
+    z-index:-1;
 }
 
 
 @keyframes rise {
     0% {
-        bottom: 850px;
+        bottom: -230px;
     }
 
     100% {
-        bottom: 970px;
+        bottom: 0px;
     }
 }
 
 /* Hill */
-#hill-container {
-    overflow-x:hidden;
-    overflow-y:hidden;
-}
-
 #hill {
     position:absolute;
     z-index:-1;
@@ -95,29 +96,29 @@
     bottom:-320px;
     overflow-y: hidden;
     overflow-x: hidden;
-}
-
-#hill-night {
-    background-color:none;
-    overflow: hidden;
+    
 }
 
 @media only screen and (min-width:600px) {
-    /* Main-Page */
+    #main-page-container {
+        overflow:hidden;
+    }
+
     h1 {
         font-size:69px;
     }
 
-    #main-nav {
-        top:-100px;
+    #quote {
+        position: relative;
+        bottom: 30px;
     }
 
     #div-maincontent {
         max-width:70%;
+        height:auto;
         align-content: center;
         margin:auto;
     }
-
 
     #img-intro-container {
         vertical-align:top;
@@ -129,25 +130,24 @@
     #img-intro {
         max-width:60%;
         min-width:100%;
-        height:390px;
+        height:200px;
         overflow-y:visible;
         z-index: 1;
     }
 
     @keyframes rise {
         0% {
-            bottom: 890px;
+            bottom: -220px;
         }
     
         100% {
-            bottom: 950px;
+            bottom: -23px;
         }
     }
 
     #moon {
         position:relative;
-        left: 651px;
-        bottom:120px;
+        left: -8px;
     }
 
     #hill {

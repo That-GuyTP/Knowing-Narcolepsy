@@ -2,7 +2,7 @@ import "../css/FormSuccessStory.css";
 
 const From_SuccessStory = () => {
     return (
-        <div>
+        <div className="div-content">
             <h2>Success Stories</h2>
             <form id="form-success-story">
                 <label></label>

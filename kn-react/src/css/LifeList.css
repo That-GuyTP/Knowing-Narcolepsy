@@ -1,6 +1,7 @@
 /* Treatment */
 #life-list-container {
-    background-color: var(--bckgrd-color);
+    background: var(--prim-color);
+    padding: 10px;
 }
 
 #life-list{
@@ -8,26 +9,27 @@
     font-size:25px;
 }
 
-#life-list li {
-    text-decoration: none;
-}
-
-#lifelist div{
-    margin:10px;
+.life-list-item {
+    margin: 10px;
+    border-bottom: yellow;
 }
 
 .lifestyle-img {
     margin-top: 15px;
+    max-height: 100%;
     max-width: 100%;
     margin-bottom:5px;
 }
 
 @media only screen and (min-width:600px) {
-    /* Treatment */
-    .life-list {
+    #life-list {
         display:flex;
         flex-wrap:wrap;
-        background-color: var(--bckgrd-color);
+        padding:10px;
+    }
+
+    .life-list-item {
+        background: var(--prim-color);
     }
     
     .lifestyle-img {

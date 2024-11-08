@@ -13,7 +13,7 @@ const Images = importAll(require.context('../images/support', false, /\.(png|jpe
 
 const Resources = () => {
     return (
-        <div>
+        <div className="div-content">
             <h2>Resources</h2>
             <Resource 
                 websiteLink="https://narcolepsynetwork.org"
