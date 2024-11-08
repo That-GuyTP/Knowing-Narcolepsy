@@ -1,35 +1,32 @@
 import {Link} from "react-router-dom";
-//import {useState} from "react";
+import {useState} from "react";
 import "../css/Navigation.css";
 
 
 const Navigation = () => {
     
-    /*
-    const getWebpage = (page) => {
-        return page.keys().map(page);
-    };
+    //Nav Toggle Functionality
+    const [navDisplay, setNavDisplay] = useState(false);
+    const toggleNav = () => {
+        setNavDisplay(!navDisplay);
+    }
 
-    const webpage = getWebpage (
-        require.context()
-    )
-    
-    const [currentLink, setCurrentLink] = useState(0);
-    const setUnclicked = () => {
-        setLinkState()
-    };
-    */
-
+    //HTML Return
     return (
         <>
         <nav id="nav">
-            <ul>
+            <div id="toggle" onClick={toggleNav}>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul className={navDisplay ? "" : "hide-small"}>
                 <li><Link to="/">Main Page</Link></li>
                 <li><Link to="/AboutMe">About Me</Link></li>
                 <li><Link to="/Information">Information</Link></li>
                 <li><Link to="/Treatment">Treatment</Link></li>
                 <li><Link to="/Support">Support</Link></li>
-            </ul>
+            </ul> 
         </nav>
         </>
     );
