@@ -9,7 +9,7 @@ const importAll = (r) => {
     return images;
 }
 
-const Images = importAll(require.context('../images/support', false, /\.(png|jpe?g|svg)$/))
+const Images = importAll(require.context('../images/support', false, /\.(png|jpe?g|svg)$/));
 
 const Resources = () => {
     return (

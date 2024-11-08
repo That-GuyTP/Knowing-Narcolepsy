@@ -4,12 +4,22 @@ import axios from "axios";
 import "../css/SuccessStories.css";
 import Story from "../components/Story";
 
+const importAll = (r) => {
+    let images = {};
+    r.keys().forEach((item) => {
+        images[item.replace('./', '')] = r(item);
+    });
+    return images;
+}
+
+const Images = importAll(require.context('../images/treatment/people', false, /\.(png|jpe?g|svg)$/));
+
 
 const SuccessStories = () => {
     const [stories, setStories] = useState([]);
     useEffect(() => {
         (async() => {
-            const response = await axios.get("https://that-guytp.github.io/kn-react/src/json/success-stories.json");
+            const response = await axios.get("https://that-guytp.github.io/csce242/projects/part6/success-stories.json");
             setStories(response.data);
         })();
     }, []);
@@ -21,16 +31,19 @@ const SuccessStories = () => {
                 fellow narcoleptics about their life situations as well as offer more personal solutions to symptoms one 
                 may suffer from. If you want to add your own Success Story <Link to="/Support" id="info-link">click here</Link></p>
             <div id="success-stories">
-                <Story
-                    img={stories.img_name + stories.first_name + ".jpg"}
-                    firstName={stories.first_name}
-                    lastName={stories.last_name}
-                    diagnosed={stories.date_diagnosed}
-                    type={stories.type_of_narcolepsy}
-                    details={stories.user_text}
-                    state={stories.state}
-                    city={stories.city}
-                />
+                {stories.map((story)=>(
+                    <Story
+                        img={Images[story.first_name]}
+                        firstName={story.first_name}
+                        lastName={story.last_name}
+                        diagnosed={story.date_diagnosed}
+                        type={story.type_of_narcolepsy}
+                        details={story.user_text}
+                        state={story.state}
+                        city={story.city}
+                    />
+                ))}
+                
             </div>
         </div>
     );
