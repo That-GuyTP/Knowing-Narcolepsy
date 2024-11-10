@@ -1,7 +1,7 @@
 import "../css/Story.css";
 
 const Story = (story) => {
-    const imageSrc = `http://localhost:3000/${story.img}`;
+    const imageSrc = `https://knowing-narcolepsy-backend.onrender.com/${story.img}`;
     return (
         <>
         <div id="success-story" className="columns">

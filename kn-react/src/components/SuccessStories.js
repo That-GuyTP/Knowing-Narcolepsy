@@ -8,7 +8,9 @@ const SuccessStories = () => {
     const [stories, setStories] = useState([]);
     useEffect(() => {
         (async() => {
-            const response = await axios.get("http://localhost:3000/api/success-stories/"); //https://that-guytp.github.io/csce242/projects/part6/success-stories.json
+            const response = await axios.get("https://knowing-narcolepsy-backend.onrender.com/api/success-stories/");
+            //https://that-guytp.github.io/csce242/projects/part6/success-stories.json
+            //http://localhost:3000/api/success-stories/
             setStories(response.data);
         })();
     }, []);
