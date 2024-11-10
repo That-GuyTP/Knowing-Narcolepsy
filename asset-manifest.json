@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Knowing-Narcolepsy/static/css/main.d3a3f5d7.css",
-    "main.js": "/Knowing-Narcolepsy/static/js/main.1dd348b0.js",
+    "main.css": "/Knowing-Narcolepsy/static/css/main.cf3d5b85.css",
+    "main.js": "/Knowing-Narcolepsy/static/js/main.7392eda8.js",
     "static/media/AboutMe.jpg": "/Knowing-Narcolepsy/static/media/AboutMe.a4e05c7eeb09de0ca74e.jpg",
     "static/media/nap.jpg": "/Knowing-Narcolepsy/static/media/nap.a281ce31dffc6e364380.jpg",
     "static/media/USNarcMap.png": "/Knowing-Narcolepsy/static/media/USNarcMap.141eb525e6cab454785d.png",
@@ -16,11 +16,11 @@
     "static/media/background.png": "/Knowing-Narcolepsy/static/media/background.03dacd4315dbd5cb3bd9.png",
     "static/media/Reddit.png": "/Knowing-Narcolepsy/static/media/Reddit.8ab0e9e67dc03b99bfe8.png",
     "index.html": "/Knowing-Narcolepsy/index.html",
-    "main.d3a3f5d7.css.map": "/Knowing-Narcolepsy/static/css/main.d3a3f5d7.css.map",
-    "main.1dd348b0.js.map": "/Knowing-Narcolepsy/static/js/main.1dd348b0.js.map"
+    "main.cf3d5b85.css.map": "/Knowing-Narcolepsy/static/css/main.cf3d5b85.css.map",
+    "main.7392eda8.js.map": "/Knowing-Narcolepsy/static/js/main.7392eda8.js.map"
   },
   "entrypoints": [
-    "static/css/main.d3a3f5d7.css",
-    "static/js/main.1dd348b0.js"
+    "static/css/main.cf3d5b85.css",
+    "static/js/main.7392eda8.js"
   ]
 }
