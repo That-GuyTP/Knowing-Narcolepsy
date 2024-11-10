@@ -15,3 +15,8 @@
 .block {
     display:flex;
 }
+
+#youtubeVideo {
+    display:block;
+    margin:auto;
+}

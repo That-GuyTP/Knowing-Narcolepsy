@@ -3,7 +3,7 @@ import "../css/FormSuccessStory.css";
 const From_SuccessStory = () => {
     return (
         <div className="div-content">
-            <h2>Success Stories</h2>
+            <h2>Success Stories (WIP)</h2>
             <form id="form-success-story">
                 <label></label>
                 <input type="text" id="first-name" class="user-info" placeholder="First Name" value=""></input>
@@ -25,6 +25,7 @@ const From_SuccessStory = () => {
 
                 <label></label>
                 <input type="text" id="city" class="user-info" placeholder="City" value=""></input>
+                <button type="submit">Submit</button>
             </form>
         </div>
     );

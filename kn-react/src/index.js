@@ -31,17 +31,3 @@ const App = () => {
 root.render(
     <App />
 );
-
-/*
-const useConditionalClass = () => {
-  const location = useLocation();
-  const rootElement = document.getElementById('root');
-
-  // Apply "long" class if not Layout or MainPage
-  if (location.pathname !== '/') {
-    rootElement.classList.add('long');
-  } else {
-    rootElement.classList.remove('long');
-  }
-};
-*/

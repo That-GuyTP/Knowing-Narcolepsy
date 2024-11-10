@@ -15,6 +15,17 @@ const Information = () => {
                 currently of why this happens is because a narcoleptic's immune system is attacking and destroying these neurons causing their deficiency. Because Narcolepsy isn't fully understood, scientist don't have an answer 
                 as to what causes someone to develop narcolepsy. The most common theories are genetics (still unconfirmed), chronic strep throat, head injuries, emotional truama, and brain disorders.
             </p>
+            <iframe 
+                id="youtubeVideo"
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/DJU0CyDCETI?si=8DTyzhQDE1vBHA_z" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+            ></iframe>
         </div>
         <div id="Symp" className="div-content">
             <h2>Symptoms</h2>
