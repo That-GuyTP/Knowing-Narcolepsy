@@ -1,0 +1,5 @@
+#resource {
+    border: 3px solid var(--bckgrd-color);
+    margin: 5px;
+    padding:5px;
+}
