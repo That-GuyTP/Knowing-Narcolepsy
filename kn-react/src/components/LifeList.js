@@ -7,7 +7,7 @@ import FindYourself from "../images/treatment/findYourself.jpg";
 
 const LifeList = () => {
     return (
-        <div id="life-list-container">
+        <div id="life-list-container" className="div-content">
             <div>
                 <h2>Lifestyle Changes</h2>
                 <p>While Narcolespy may be uncurable there are many things you can do without the need of medicine to help manage your conditions:</p>

@@ -1,19 +1,30 @@
 import "../css/Story.css";
-import "../components/SuccessStories";
 
 const Story = (story) => {
+    const imageSrc = `http://localhost:3000/${story.img}`;
     return (
-        <div>
+        <>
+        <div id="success-story" className="columns">
             <div className="one">
-                <img src={story.img} alt={"image of " + story.firstName}/>
+                <img className="ss-img" src={imageSrc} alt={"image of " + story.firstName}/>
             </div>
-            <div className="three">
+            <div id="details" className="two">
                 <h2>{story.firstName} {story.lastName}</h2>
-                <h3>from {story.city}, {story.state}</h3>
-                <p>Diagnosed: {story.diagnosed} Type: {story.type}</p>
-                <p>{story.details}</p>
+                {story.details.map((detail) => {
+                    return (
+                        <>
+                        <p>
+                        <b>From:</b> {story.city}, {story.state} <br/>
+                        <b>Diagnosed: </b>{detail.date_diagnosed} <br/>
+                        <b>Type: </b> {detail.type_of_narcolepsy} <br/>
+                        <b>Story: </b>{detail.user_text}
+                        </p>
+                        </>
+                    )
+                })}
             </div>
         </div>
+        </>
     );
 };
 

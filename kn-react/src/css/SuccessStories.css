@@ -1,5 +1,17 @@
 #success-stories-container {
-    margin-top: 10px;
     background: var(--prim-color);
     padding: 10px;
+}
+
+#success-stories-container div {
+    
+}
+
+#success-stories {
+    margin:10px;
+    
+}
+
+#success-stories div {
+    margin:5px;
 }

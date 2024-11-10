@@ -4,22 +4,11 @@ import axios from "axios";
 import "../css/SuccessStories.css";
 import Story from "../components/Story";
 
-const importAll = (r) => {
-    let images = {};
-    r.keys().forEach((item) => {
-        images[item.replace('./', '')] = r(item);
-    });
-    return images;
-}
-
-const Images = importAll(require.context('../images/treatment/people', false, /\.(png|jpe?g|svg)$/));
-
-
 const SuccessStories = () => {
     const [stories, setStories] = useState([]);
     useEffect(() => {
         (async() => {
-            const response = await axios.get("https://that-guytp.github.io/csce242/projects/part6/success-stories.json");
+            const response = await axios.get("http://localhost:3000/api/success-stories/"); //https://that-guytp.github.io/csce242/projects/part6/success-stories.json
             setStories(response.data);
         })();
     }, []);
@@ -33,17 +22,14 @@ const SuccessStories = () => {
             <div id="success-stories">
                 {stories.map((story)=>(
                     <Story
-                        img={Images[story.first_name + ".jpg"]}
+                        img={story.img_name}
                         firstName={story.first_name}
                         lastName={story.last_name}
-                        diagnosed={story.date_diagnosed}
-                        type={story.type_of_narcolepsy}
-                        details={story.user_text}
+                        details={story.narc_details}
                         state={story.state}
                         city={story.city}
                     />
                 ))}
-                
             </div>
         </div>
     );
