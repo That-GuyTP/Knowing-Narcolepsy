@@ -14,14 +14,14 @@ const Story = (story) => {
                     return (
                         <>
                         <p>
-                        <b>From:</b> {story.city}, {story.state} <br/>
-                        <b>Diagnosed: </b>{detail.date_diagnosed} <br/>
-                        <b>Type: </b> {detail.type_of_narcolepsy} <br/>
-                        <b>Story: </b>{detail.user_text}
+                            <b>From:</b> {story.city}, {story.state} <br/>
+                            <b>Diagnosed: </b>{detail.date_diagnosed} <br/>
+                            <b>Type: </b> {detail.type_of_narcolepsy} <br/>
+                            <b>Story: </b>{detail.user_text}
                         </p>
                         </>
-                    )
-                })}
+                    );
+                })};
             </div>
         </div>
         </>

@@ -15,6 +15,11 @@ const SuccessStories = () => {
         })();
     }, []);
     
+    //Update Stories w/o need for Refreshing
+    const updateSuccessStories = (story) => {
+        setStories((story)=>[...stories, story]);
+    }
+
     return (
         <div id="success-stories-container" className="div-content">
             <h2>Success Stories</h2>
@@ -23,7 +28,7 @@ const SuccessStories = () => {
                 may suffer from. If you want to add your own Success Story <Link to="/Support" id="info-link">click here</Link></p>
             <div id="success-stories">
                 {stories.map((story)=>(
-                    <Story
+                    <Story showNewStory={updateSuccessStories}
                         img={story.img_name}
                         firstName={story.first_name}
                         lastName={story.last_name}
