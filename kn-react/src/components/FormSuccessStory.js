@@ -33,6 +33,7 @@ const FormSuccessStory = ({ showNewStory }) => {
         if(response.status === 200) {
             setResult("Story successfully added!");
             showNewStory(await response.json());
+            setInputs({});
             event.target.reset();
         } else {
             console.log([...formData.entries()]); // ******* DEBUG *******
