@@ -1,7 +1,7 @@
 import "../css/Story.css";
 
 const Story = (story) => {
-    const imageSrc = `https://knowing-narcolepsy-backend.onrender.com/${story.img}`;
+    const imageSrc = `https://knowing-narcolepsy-backend.onrender.com/api/success-stories/${story.img}`;
     return (
         <>
         <div id="success-story" className="columns">
@@ -10,18 +10,18 @@ const Story = (story) => {
             </div>
             <div id="details" className="two">
                 <h2>{story.firstName} {story.lastName}</h2>
-                {story.details.map((detail) => {
+                {story.details.map((detail, index) => {
                     return (
                         <>
-                        <p>
+                        <p key={index}>
                             <b>From:</b> {story.city}, {story.state} <br/>
                             <b>Diagnosed: </b>{detail.date_diagnosed} <br/>
                             <b>Type: </b> {detail.type_of_narcolepsy} <br/>
                             <b>Story: </b>{detail.user_text}
                         </p>
                         </>
-                    );
-                })};
+                    )
+                })}
             </div>
         </div>
         </>

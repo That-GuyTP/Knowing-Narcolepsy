@@ -1,9 +1,7 @@
 import "../css/FormSuccessStory.css";
+import { useState } from "react";
 
-// import "../css/Dialog.css";
-import React, { useState } from "react";
-
-const addStory = (value) => {
+const FormSuccessStory = ({ showNewStory }) => {
 
     //Track Added Inputs
     const [inputs, setInputs] = useState({});
@@ -27,50 +25,45 @@ const addStory = (value) => {
         setResult("Sending...");
 
         const formData = new FormData(event.target);
-            console.log(...formData);
-            const response = await fetch("https://knowing-narcolepsy-backend.onrender.com/api/success-stories", { 
+            console.log(...formData); // ******* DEBUG *******
+            const response = await fetch("https://knowing-narcolepsy-backend.onrender.com/api/success-stories/", { 
             method:"POST",
             body:formData
         });
-        if(response.status == 200) {
+        if(response.status === 200) {
             setResult("Story successfully added!");
-            value.showNewStory(await response.json());
+            showNewStory(await response.json());
             event.target.reset();
         } else {
+            console.log([...formData.entries()]); // ******* DEBUG *******
             setResult("Error adding story");
         }
     };
     return (
         <div className="div-content">
-            <h2>Success Stories (WIP)</h2>
+            <h2>Success Stories</h2>
             <form id="form-success-story" onSubmit={addStoryToServer} >
-                <input type="text" id="first-name" class="user-info" placeholder="First Name" value={inputs.firstName || ""} onChange={handleChange}></input>
-
-                <input type="text" id="last-name" class="user-info" placeholder="Last Name" value={inputs.lastName || ""} onChange={handleChange}></input>
+                <input type="text" id="first-name" name="firstName" class="user-info" placeholder="First Name" value={inputs.firstName || ""} onChange={handleChange}></input>
+                <input type="text" id="last-name" name="lastName" class="user-info" placeholder="Last Name" value={inputs.lastName || ""} onChange={handleChange}></input>
+                <input type="number" id="date_diagnosed" name="diagnosed" class="user-info" placeholder="Date Diagnosed" value={inputs.diagnosed || ""} onChange={handleChange}></input>
+                <input type="number" id="type_of_narcolepsy" name="type" class="user-info" placeholder="Type of Narcolepsy" value={inputs.type || ""} onChange={handleChange}></input>
+                <input type="text" id="user_text" name="story" class="user-info" placeholder="Your Story" value={inputs.story || ""} onChange={handleChange}></input>
+                <input type="text" id="state" name="state" class="user-info" placeholder="State" value={inputs.state || ""} onChange={handleChange}></input>
+                <input type="text" id="city" name="city" class="user-info" placeholder="City (Optional)" value={inputs.city || ""} onChange={handleChange}></input>
                 
-                <input type="text" id="date_diagnosed" class="user-info" placeholder="Date Diagnosed" value={inputs.diagnosed || ""} onChange={handleChange}></input>
-
-                <input type="text" id="type_of_narcolepsy" class="user-info" placeholder="Type of Narcolepsy" value={inputs.type || ""} onChange={handleChange}></input>
-
-                <input type="text" id="user_text" class="user-info" placeholder="Your Story" value={inputs.story || ""} onChange={handleChange}></input>
-
-                <input type="text" id="state" class="user-info" placeholder="State" value={inputs.state || ""} onChange={handleChange}></input>
-
-                <input type="text" id="city" class="user-info" placeholder="City (Optional)" value={inputs.city || ""} onChange={handleChange}></input>
-                
-                <section className="columns">
+                <section id="img-preview-section" className="columns">
                     <p id="img-preview">
-                        <img id="img-prev" alt="" src={inputs.img != null ? URL.createObjectURL(inputs.img) : ""} />
+                        <img id="img-prev" alt="" class="centered-image" src={inputs.img != null ? URL.createObjectURL(inputs.img) : ""} />
                     </p>
                     <p id="img-upload">
-                        <input type="file" id="img" name="img" acecpt="image/*" onChange={handleImageChange} />
+                        <input type="file" id="img" name="img" accept="image/*" onChange={handleImageChange} />
                     </p>
                 </section>
                 <button type="submit">Submit</button>
                 <p id="result">{result}</p>
             </form>
         </div>
-    );
+    )
 };
 
-export default addStory;
+export default FormSuccessStory;

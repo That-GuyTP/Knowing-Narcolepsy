@@ -1,6 +1,44 @@
+.centered-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #form-success-story {
     display: flex; /* Use flexbox */
     flex-direction: column; /* Stack children vertically */
     align-items: center; /* Center children horizontally */
     margin: auto; /* Center the form itself */
+    justify-content: center;
+}
+
+#img-preview-section {
+    max-width:60%;
+    margin:5px;
+}
+
+#img-prev {
+    max-width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    #form-success-story {
+        display: flex; /* Use flexbox */
+        flex-direction: column; /* Stack children vertically */
+        align-items: center; /* Center children horizontally */
+        margin: auto; /* Center the form itself */
+        justify-content: center;
+    }
+    
+    #img-preview {
+        flex:1;
+    }
+    
+    #img-prev {
+        max-width: 100%;
+    }
+    
+    #img-upload {
+        flex: 5;
+    }
 }

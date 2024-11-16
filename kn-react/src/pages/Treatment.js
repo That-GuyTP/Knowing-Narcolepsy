@@ -1,7 +1,9 @@
+import "../css/Root.css";
 import "../css/Treatment.css";
 import Navigation from "../components/Navigation";
 import LifeList from "../components/LifeList";
 import SuccessStories from "../components/SuccessStories";
+
 
 
 const Treatment = () => {
@@ -21,7 +23,7 @@ const Treatment = () => {
             </p>
         </div>
         <LifeList/>
-        <SuccessStories />
+        <SuccessStories/>
         </>
     );
 };
