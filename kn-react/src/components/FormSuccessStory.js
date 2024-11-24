@@ -44,17 +44,17 @@ const FormSuccessStory = ({ showNewStory }) => {
         <div className="div-content">
             <h2>Success Stories</h2>
             <form id="form-success-story" onSubmit={addStoryToServer} >
-                <input type="text" id="first-name" name="firstName" class="user-info" placeholder="First Name" value={inputs.firstName || ""} onChange={handleChange}></input>
-                <input type="text" id="last-name" name="lastName" class="user-info" placeholder="Last Name" value={inputs.lastName || ""} onChange={handleChange}></input>
-                <input type="number" id="date_diagnosed" name="diagnosed" class="user-info" placeholder="Date Diagnosed" value={inputs.diagnosed || ""} onChange={handleChange}></input>
-                <input type="number" id="type_of_narcolepsy" name="type" class="user-info" placeholder="Type of Narcolepsy" value={inputs.type || ""} onChange={handleChange}></input>
-                <input type="text" id="user_text" name="story" class="user-info" placeholder="Your Story" value={inputs.story || ""} onChange={handleChange}></input>
-                <input type="text" id="state" name="state" class="user-info" placeholder="State" value={inputs.state || ""} onChange={handleChange}></input>
-                <input type="text" id="city" name="city" class="user-info" placeholder="City (Optional)" value={inputs.city || ""} onChange={handleChange}></input>
+                <input type="text" id="first-name" name="firstName" className="user-info" placeholder="First Name" value={inputs.firstName || ""} onChange={handleChange}></input>
+                <input type="text" id="last-name" name="lastName" className="user-info" placeholder="Last Name" value={inputs.lastName || ""} onChange={handleChange}></input>
+                <input type="number" id="date_diagnosed" name="diagnosed" className="user-info" placeholder="Date Diagnosed" value={inputs.diagnosed || ""} onChange={handleChange}></input>
+                <input type="number" id="type_of_narcolepsy" name="type" className="user-info" placeholder="Type of Narcolepsy" value={inputs.type || ""} onChange={handleChange}></input>
+                <input type="text" id="user_text" name="story" className="user-info" placeholder="Your Story" value={inputs.story || ""} onChange={handleChange}></input>
+                <input type="text" id="state" name="state" className="user-info" placeholder="State" value={inputs.state || ""} onChange={handleChange}></input>
+                <input type="text" id="city" name="city" className="user-info" placeholder="City (Optional)" value={inputs.city || ""} onChange={handleChange}></input>
                 
                 <section id="img-preview-section" className="columns">
                     <p id="img-preview">
-                        <img id="img-prev" alt="" class="centered-image" src={inputs.img != null ? URL.createObjectURL(inputs.img) : ""} />
+                        <img id="img-prev" alt="" className="centered-image" src={inputs.img != null ? URL.createObjectURL(inputs.img) : ""} />
                     </p>
                     <p id="img-upload">
                         <input type="file" id="img" name="img" accept="image/*" onChange={handleImageChange} />

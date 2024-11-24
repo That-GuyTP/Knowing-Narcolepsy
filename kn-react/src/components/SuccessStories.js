@@ -8,10 +8,11 @@ const SuccessStories = () => {
     const [stories, setStories] = useState([]);
     useEffect(() => {
         (async() => {
-            const response = await axios.get("https://knowing-narcolepsy-backend.onrender.com/api/success-stories/");
+            const response = await axios.get("http://localhost:3001/api/success-stories/");
             //https://knowing-narcolepsy-backend.onrender.com/api/success-stories/ - Render Json
             //http://localhost:3001/api/success-stories/ - Localhost Json
             //https://that-guytp.github.io/csce242/projects/part6/success-stories.json - Orignial JSON file from project. Backup backup/
+            console.log("API Response:", response.data);
             setStories(response.data);
         })();
     }, []);
@@ -30,7 +31,7 @@ const SuccessStories = () => {
             <div id="success-stories">
                 {stories.map((story)=>(
                     <Story showNewStory={updateSuccessStories}
-                        img={story.img_name}
+                        img_name={story.img_name}
                         firstName={story.first_name}
                         lastName={story.last_name}
                         details={story.narc_details}
