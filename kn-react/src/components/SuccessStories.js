@@ -37,6 +37,7 @@ const SuccessStories = () => {
                         details={story.narc_details}
                         state={story.state}
                         city={story.city}
+                        _id={story._id}
                     />
                 ))}
             </div>

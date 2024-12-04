@@ -5,12 +5,16 @@ const DeleteSuccessStory = (value) => {
     const [result, setResult] = useState("");
     const deleteSS = async() => {
         const response = await fetch(`http://localhost:3001/api/success-stories/${value._id}`, {
-            method:"DELETE"
+          method:"DELETE",
         });
         if (response.status === 200) {
-            setResult("Success Story successfully deleted.");
+          setResult("Success Story successfully deleted.");
+          value.hideSuccessStory();
+          value.closeDialog();
         } else {
-            setResult("Error! Success Story couldn't be deleted");
+          console.log("DeletedSS Value: ", value); // DEBUG
+          console.log(response.text); // DEBUG
+          setResult("Error! Success Story couldn't be deleted");
         }
     };
 

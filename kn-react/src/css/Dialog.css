@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.w3-modal-content {
+  background: var(--prim-color);
+}
+
 #add-dialog,
 #edit-dialog,
 #delete-dialog {

@@ -31,20 +31,29 @@ const EditSuccessStory = (value) => {
   const handleImageChange = (event) => {
     const name = event.target.name;
     const value = event.target.files[0];
-    setInputs((values) => ({ ...values, [name]: value }));
+    setInputs((values) => ({ ...values, img: value }));
   };
 
   const onSubmit = async(event) => { // Must be async since we're contacting the server.
     event.preventDefault(); // Prevent the function from refreshing the page.
     setResult("Confirming Edits...");
-    
+
     //Convert updated form data to variable
-    const formData = new FormData(event.target); // Take all the the form data and assign it to a variable, like in formSuccessStory.js
-    formData.append("details", JSON.stringify(inputs.details)); //Convert details to JSON format.
-    console.log(...formData); // DEBUG
+    const formData = new FormData(/*event.target*/); // Take all the the form data and assign it to a variable, like in formSuccessStory.js
+    formData.append("firstName", inputs.firstName);
+    formData.append("lastName", inputs.lastName);
+    formData.append("state", inputs.state);
+    formData.append("city", inputs.city);
+    //formData.append("details", JSON.stringify(inputs.details)); //Convert details to JSON format.
+    formData.append("diagnosed", inputs.details[0].date_diagnosed);
+    formData.append("type", inputs.details[0].type_of_narcolepsy);
+    formData.append("story", inputs.details[0].user_text);
+    if (inputs.img) {
+      formData.append("img", inputs.img);
+    }
     const response = await fetch(`http://localhost:3001/api/success-stories/${value._id}`, {
       method:"PUT",
-      body:formData // Add the formData to the body.s
+      body:formData, // Add the formData to the body.s
     });
 
     if(response.status === 200) {
