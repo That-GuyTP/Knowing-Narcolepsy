@@ -53,7 +53,7 @@ const EditSuccessStory = (value) => {
       formData.append("img", inputs.img);
     }
     // console.log(inputs.details); DEBUG
-    const response = await fetch(`http://localhost:3001/api/success-stories/${value._id}`, {
+    const response = await fetch(`https://knowing-narcolepsy-backend.onrender.com/api/success-stories/${value._id}`, {
       method:"PUT",
       body:formData, // Add the formData to the body.s
     });
@@ -150,8 +150,8 @@ const EditSuccessStory = (value) => {
                           alt="The current person for the story" 
                           className="centered-image" 
                           src={inputs.img_name ? URL.createObjectURL(inputs.img_name) 
-                              : inputs.prev_img ? `http://localhost:3001/images/${inputs.prev_img}` 
-                              : `http://localhost:3001/images/${inputs.prev_img}` } /*  */ 
+                              : inputs.prev_img ? `https://knowing-narcolepsy-backend.onrender.com/images/${inputs.prev_img}` 
+                              : `https://knowing-narcolepsy-backend.onrender.com/images/${inputs.prev_img}` } /*  */ 
                         />
                     </p>
                     <p id="img-upload">

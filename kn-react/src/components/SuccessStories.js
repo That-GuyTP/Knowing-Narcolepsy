@@ -8,7 +8,7 @@ const SuccessStories = () => {
     const [stories, setStories] = useState([]);
     useEffect(() => {
         (async() => {
-            const response = await axios.get("http://localhost:3001/api/success-stories/");
+            const response = await axios.get("https://knowing-narcolepsy-backend.onrender.com/api/success-stories/");
             //https://knowing-narcolepsy-backend.onrender.com/api/success-stories/ - Render Json
             //http://localhost:3001/api/success-stories/ - Localhost Json
             //https://that-guytp.github.io/csce242/projects/part6/success-stories.json - Orignial JSON file from project. Backup backup/
