@@ -8,32 +8,36 @@ const Story = (story) => {
     const [showEditDialog, setShowEditDialog] = useState(false);
     const [showDeleteDialog, setShowDeleteDialog] = useState(false);
     const [successStory, setSuccessStory] = useState(story);
-    const [showSucessStory, setShowSuccessStory] = useState(true);
+    const [showSucessStory, setShowSuccessStory] = useState({ ...story, details: story.details || []});
 
     //SetState Functions
     const openEditDialog = () => {
         setShowEditDialog(true);
-      };
+    };
     
-      const closeEditDialog = () => {
+    const closeEditDialog = () => {
         setShowEditDialog(false);
-      };
+    };
     
-      const openDeleteDialog = () => {
+    const openDeleteDialog = () => {
         setShowDeleteDialog(true);
-      };
+    };
     
-      const closeDeleteDialog = () => {
+    const closeDeleteDialog = () => {
         setShowDeleteDialog(false);
-      };
+    };
 
-      const hideSuccessStory = () => {
+    const hideSuccessStory = () => {
         setShowSuccessStory(false);
-      }
+    };
 
-      const editSuccessStory = (newSuccessStory) => {
-        setSuccessStory(newSuccessStory);
-      }
+    const editSuccessStory = (newSuccessStory) => {
+        setSuccessStory({
+            ...newSuccessStory, // Use the newly updated story object.
+            narc_details: newSuccessStory.narc_details || [], // Double ensure narc_details is always an array.
+        });
+        console.log("Rendered SuccessStory Object:", successStory);
+    };
 
     return (
         <>
@@ -52,8 +56,8 @@ const Story = (story) => {
                     closeDialog={closeEditDialog}
                     updateSuccessStory={editSuccessStory}
                     _id={successStory._id}
-                    first_name={successStory.firstName}
-                    last_name={successStory.lastName}
+                    first_name={successStory.first_name}
+                    last_name={successStory.last_name}
                     details={successStory.details || []}
                     state={successStory.state}
                     city={successStory.city}
@@ -62,10 +66,10 @@ const Story = (story) => {
                 ):("")}
                 <div id="success-story" className="columns" /* PRINT SS */>
                     <div className="one">
-                        <img className="ss-img" src={imageSrc} alt={"image of " + story.firstName}/>
+                        <img className="ss-img" src={imageSrc} alt={"image of " + successStory.first_name}/>
                     </div>
                     <div id="details" className="two">
-                        <h2>{story.firstName} {story.lastName}</h2>
+                        <h2>{successStory.first_name} {successStory.last_name}</h2>
                         <section id="change-buttons">
                             <span onClick={openEditDialog}> 
                                 {/*eslint-disable-next-line*/}
@@ -76,14 +80,14 @@ const Story = (story) => {
                                 &#x2715;
                             </span>
                         </section>
-                        {story.details.map((detail, index) => {
+                        {successStory.details.map((story, index) => {
                             return (
                                 <>
                                 <p key={index}>
-                                    <b>From: </b> {story.city}, {story.state} <br/>
-                                    <b>Diagnosed: </b>{detail.date_diagnosed} <br/>
-                                    <b>Type: </b> {detail.type_of_narcolepsy} <br/>
-                                    <b>Story: </b>{detail.user_text}
+                                    <b>From: </b> {successStory.city}, {successStory.state} <br/>
+                                    <b>Diagnosed: </b>{story.date_diagnosed} <br/>
+                                    <b>Type: </b> {story.type_of_narcolepsy} <br/>
+                                    <b>Story: </b>{story.user_text}
                                 </p>
                                 </>
                             )

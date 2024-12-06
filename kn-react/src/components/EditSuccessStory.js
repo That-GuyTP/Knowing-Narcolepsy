@@ -3,19 +3,20 @@ import "../components/FormSuccessStory";
 import React, { useState } from "react";
 
 const EditSuccessStory = (value) => {
-  console.log("Initial Value:", value);
+  // console.log("Initial Value:", value);
   const [inputs, setInputs] = useState({
     _id: value._id,
     firstName: value.first_name,
     lastName: value.last_name,
     details: value.details || [],
+    // diagnosed: value.details.date_diagnosed,
     state: value.state,
     city: value.city,
     prev_img: value.img_name || null
   });
   const [result, setResult] = useState("");
-  console.log("current Image:", inputs.img_name); // Debug
-  console.log("Previous Image URL:", inputs.prev_img); // Debug
+  // console.log("current Image:", inputs.img_name); // Debug
+  // console.log("Previous Image URL:", inputs.prev_img); // Debug
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -51,6 +52,7 @@ const EditSuccessStory = (value) => {
     if (inputs.img) {
       formData.append("img", inputs.img);
     }
+    // console.log(inputs.details); DEBUG
     const response = await fetch(`http://localhost:3001/api/success-stories/${value._id}`, {
       method:"PUT",
       body:formData, // Add the formData to the body.s
@@ -58,8 +60,9 @@ const EditSuccessStory = (value) => {
 
     if(response.status === 200) {
       setResult("Succesfully updated Success Story information");
-      event.target.reset();
-      value.updateSuccessStory(await response.json()); // Await the response from server.js. Then send that house to value to use in updateHouse.
+      //event.target.reset();
+      const updatedStory = await response.json(); // Await the response from server.js. Then send that house to value to use in updateHouse.
+      value.updateSuccessStory({ ...updatedStory, details: updatedStory.details || [] });
       value.closeDialog();
     } else {
       setResult("Error! Success Story could not be edited.");
@@ -78,7 +81,7 @@ const EditSuccessStory = (value) => {
             &times;
           </span>
           <form id="form-success-story" onSubmit={onSubmit} >
-                <label htmlFor="name ">First Name: </label>
+                {/* <label htmlFor="name ">First Name: </label> */}
                 <input //First Name
                   type="text" 
                   id="first-name" 
@@ -146,9 +149,9 @@ const EditSuccessStory = (value) => {
                           id="img-prev" 
                           alt="The current person for the story" 
                           className="centered-image" 
-                          src={inputs.img != null ? URL.createObjectURL(inputs.img) 
-                              : inputs.prev_img != null ? `http://localhost:3001/images/${inputs.prev_img}` 
-                              : `http://localhost:3001/images/${inputs.prev_img}` } 
+                          src={inputs.img_name ? URL.createObjectURL(inputs.img_name) 
+                              : inputs.prev_img ? `http://localhost:3001/images/${inputs.prev_img}` 
+                              : `http://localhost:3001/images/${inputs.prev_img}` } /*  */ 
                         />
                     </p>
                     <p id="img-upload">

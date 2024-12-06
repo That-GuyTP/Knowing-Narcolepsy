@@ -19,8 +19,11 @@ const SuccessStories = () => {
     
     //Update Stories w/o need for Refreshing
     const updateSuccessStories = (newStory) => {
-        setStories((prevStories)=>[...prevStories, newStory]);
-    }
+        //setStories((prevStories)=>[...prevStories, newStory]);
+        setStories((prevStories) =>
+            prevStories.map((story) => story._id == newStory._id ? newStory : story)
+        );
+    };
 
     return (
         <div id="success-stories-container" className="div-content">
@@ -30,11 +33,12 @@ const SuccessStories = () => {
                 may suffer from. If you want to add your own Success Story <Link to="/Support" id="info-link">click here</Link></p>
             <div id="success-stories">
                 {stories.map((story)=>(
-                    <Story showNewStory={updateSuccessStories}
+                    <Story 
+                        showNewStory={updateSuccessStories}
                         img_name={story.img_name}
-                        firstName={story.first_name}
-                        lastName={story.last_name}
-                        details={story.narc_details}
+                        first_name={story.first_name}
+                        last_name={story.last_name}
+                        details={story.narc_details || []}
                         state={story.state}
                         city={story.city}
                         _id={story._id}
