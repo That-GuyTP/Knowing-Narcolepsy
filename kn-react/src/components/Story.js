@@ -4,7 +4,7 @@ import DeleteSS from "./DeleteSuccessStory";
 import EditSS from "./EditSuccessStory";
 
 const Story = (story) => {
-    const imageSrc = `https://knowing-narcolepsy-backend.onrender.com/images/${story.img}`; // http://localhost:3001/images/${story.img_name}
+    const imageSrc = `https://knowing-narcolepsy-backend.onrender.com/images/${story.img_name}`; // http://localhost:3001/images/${story.img_name}
     const [showEditDialog, setShowEditDialog] = useState(false);
     const [showDeleteDialog, setShowDeleteDialog] = useState(false);
     const [successStory, setSuccessStory] = useState(story);
