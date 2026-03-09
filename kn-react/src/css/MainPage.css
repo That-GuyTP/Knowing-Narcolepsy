@@ -44,11 +44,21 @@
 
 #div-intro {
     position: relative;
+    width: min(100%, 720px);
+    margin: 0 auto;
 }
 
 #div-img {
     display: block;
     width: 100%;
+    margin-top: clamp(0.55rem, 1.4vh, 0.95rem);
+}
+
+#div-intro,
+#div-img {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
 }
 
 #img-intro-container {
@@ -113,6 +123,7 @@
 /* Hill */
 #hill {
     --hill-size: clamp(2200px, 430vw, 4200px);
+    --hill-crest-offset: clamp(170px, 24vh, 260px);
     position: absolute;
     z-index: -1;
     width: var(--hill-size);
@@ -120,7 +131,8 @@
     background-color: var(--prim-color);
     border-radius: 50%;
     left: 50%;
-    top: clamp(120px, 20vh, 220px);
+    top: auto;
+    bottom: calc((var(--hill-size) - var(--hill-crest-offset)) * -1);
     transform: translateX(-50%);
     pointer-events: none;
 }
@@ -136,6 +148,10 @@
 
     #div-maincontent {
         width: min(72vw, 920px);
+    }
+
+    #div-intro {
+        width: min(100%, 860px);
     }
 
     #moon {
@@ -154,6 +170,6 @@
 
     #hill {
         --hill-size: clamp(3600px, 330vw, 6500px);
-        top: clamp(165px, 21vh, 280px);
+        --hill-crest-offset: clamp(230px, 30vh, 360px);
     }
 }
