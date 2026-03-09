@@ -2,7 +2,7 @@
     position: relative;
     isolation: isolate;
     min-height: 100svh;
-    padding: 0.75rem 1rem 1.25rem;
+    padding: 0.75rem 1rem 0;
     overflow: hidden;
 }
 
@@ -31,9 +31,12 @@
     gap: clamp(0.6rem, 1.6vh, 1rem);
 }
 
-#div-maincontent .div-content {
+#main-page-container #div-maincontent .div-content {
     max-width: 100%;
     margin: 0;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
 }
 
 #div-intro p {
@@ -52,13 +55,6 @@
     display: block;
     width: 100%;
     margin-top: clamp(0.55rem, 1.4vh, 0.95rem);
-}
-
-#div-intro,
-#div-img {
-    background: transparent;
-    padding: 0;
-    border-radius: 0;
 }
 
 #img-intro-container {
@@ -122,24 +118,21 @@
 
 /* Hill */
 #hill {
-    --hill-size: clamp(2200px, 430vw, 4200px);
-    --hill-crest-offset: clamp(170px, 24vh, 260px);
+    width: clamp(980px, 132vw, 2100px);
+    height: clamp(430px, 58vh, 820px);
     position: absolute;
     z-index: -1;
-    width: var(--hill-size);
-    height: var(--hill-size);
     background-color: var(--prim-color);
-    border-radius: 50%;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
     left: 50%;
-    top: auto;
-    bottom: calc((var(--hill-size) - var(--hill-crest-offset)) * -1);
+    bottom: 0;
     transform: translateX(-50%);
     pointer-events: none;
 }
 
 @media only screen and (min-width:600px) {
     #main-page-container {
-        padding: 0.75rem 1.25rem 1rem;
+        padding: 0.75rem 1.25rem 0;
     }
 
     #quote {
@@ -169,7 +162,7 @@
     }
 
     #hill {
-        --hill-size: clamp(3600px, 330vw, 6500px);
-        --hill-crest-offset: clamp(230px, 30vh, 360px);
+        width: clamp(1450px, 122vw, 3000px);
+        height: clamp(560px, 62vh, 980px);
     }
 }
