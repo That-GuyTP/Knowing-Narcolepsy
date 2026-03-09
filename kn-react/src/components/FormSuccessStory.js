@@ -1,5 +1,6 @@
 import "../css/FormSuccessStory.css";
 import { useState } from "react";
+import { buildApiUrl } from "../utils/api";
 
 const FormSuccessStory = ({ showNewStory }) => {
 
@@ -26,7 +27,7 @@ const FormSuccessStory = ({ showNewStory }) => {
 
         const formData = new FormData(event.target);
             console.log(...formData); // ******* DEBUG *******
-            const response = await fetch("https://knowing-narcolepsy-backend.onrender.com/api/success-stories/", { 
+            const response = await fetch(buildApiUrl("/api/success-stories/"), { 
             method:"POST",
             body:formData
         });

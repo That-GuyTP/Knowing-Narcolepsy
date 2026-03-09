@@ -2,13 +2,34 @@ import "../css/Story.css";
 import React, { useState } from "react";
 import DeleteSS from "./DeleteSuccessStory";
 import EditSS from "./EditSuccessStory";
+import { buildImageUrl } from "../utils/api";
+
+const normalizeDetails = (story) => {
+    const details = story?.details ?? story?.narc_details ?? [];
+
+    if (Array.isArray(details)) {
+        return details;
+    }
+
+    return details ? [details] : [];
+};
+
+const normalizeStory = (story = {}) => ({
+    ...story,
+    first_name: story.first_name ?? story.firstName ?? "",
+    last_name: story.last_name ?? story.lastName ?? "",
+    img_name: story.img_name ?? story.imgName ?? "",
+    details: normalizeDetails(story),
+    city: story.city ?? "",
+    state: story.state ?? "",
+});
 
 const Story = (story) => {
-    const imageSrc = `https://knowing-narcolepsy-backend.onrender.com/images/${story.img_name}`; // http://localhost:3001/images/${story.img_name}
     const [showEditDialog, setShowEditDialog] = useState(false);
     const [showDeleteDialog, setShowDeleteDialog] = useState(false);
-    const [successStory, setSuccessStory] = useState(story);
-    const [showSucessStory, setShowSuccessStory] = useState({ ...story, details: story.details || []});
+    const [successStory, setSuccessStory] = useState(normalizeStory(story));
+    const [showSuccessStory, setShowSuccessStory] = useState(true);
+    const imageSrc = buildImageUrl(successStory.img_name);
 
     //SetState Functions
     const openEditDialog = () => {
@@ -32,22 +53,23 @@ const Story = (story) => {
     };
 
     const editSuccessStory = (newSuccessStory) => {
-        setSuccessStory({
-            ...newSuccessStory, // Use the newly updated story object.
-            narc_details: newSuccessStory.narc_details || [], // Double ensure narc_details is always an array.
-        });
-        console.log("Rendered SuccessStory Object:", successStory);
+        setSuccessStory((previousStory) =>
+            normalizeStory({
+                ...previousStory,
+                ...newSuccessStory,
+            })
+        );
     };
 
     return (
         <>
-        { showSucessStory ? (
+        { showSuccessStory ? (
             <>
                 {showDeleteDialog ? ( //DELETE SS
                     <DeleteSS
                         closeDialog={closeDeleteDialog}
                         hideSuccessStory={hideSuccessStory}
-                        name={successStory.firstName}
+                        name={successStory.first_name}
                         _id={successStory._id}
                     />
                 ):("")}
@@ -80,16 +102,15 @@ const Story = (story) => {
                                 &#x2715;
                             </span>
                         </section>
-                        {successStory.details.map((story, index) => {
+                        {successStory.details.length === 0 ? <p>No details added yet.</p> : ""}
+                        {successStory.details.map((detail, index) => {
                             return (
-                                <>
-                                <p key={index}>
+                                <p key={`${successStory._id}-${index}`}>
                                     <b>From: </b> {successStory.city}, {successStory.state} <br/>
-                                    <b>Diagnosed: </b>{story.date_diagnosed} <br/>
-                                    <b>Type: </b> {story.type_of_narcolepsy} <br/>
-                                    <b>Story: </b>{story.user_text}
+                                    <b>Diagnosed: </b>{detail.date_diagnosed} <br/>
+                                    <b>Type: </b> {detail.type_of_narcolepsy} <br/>
+                                    <b>Story: </b>{detail.user_text}
                                 </p>
-                                </>
                             )
                         })}
                     </div>

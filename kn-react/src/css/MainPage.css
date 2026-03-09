@@ -1,78 +1,103 @@
-#quote {
-    font-size:20px;
-    color:var(--nav-color);
-}
-
 #main-page-container {
-    position:relative;
-    height:auto;
+    position: relative;
+    isolation: isolate;
+    min-height: 100svh;
+    padding: 0.75rem 1rem 1.25rem;
+    overflow: hidden;
 }
 
-#div-mainpage {
-    background-image: url(../images/mainpage/background.png);
-    background-repeat: no-repeat;
-    background-position: center 0;
-    margin:0;
-    padding:0;
+#main-page-container > h1:first-of-type {
+    margin: 0.35rem auto 0.5rem;
+    font-size: clamp(2rem, 7vw, 4.35rem);
+    line-height: 1.1;
+}
+
+#quote {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    width: min(92vw, 880px);
+    font-size: clamp(1rem, 1.8vw, 1.25rem);
+    color: var(--nav-color);
+    line-height: 1.35;
 }
 
 #div-maincontent {
-    z-index: 1;
     position: relative;
-    bottom: -100px;
-    height:auto;
+    z-index: 1;
+    width: min(92vw, 760px);
+    margin: clamp(0.25rem, 1vh, 0.75rem) auto 0;
+}
+
+#div-maincontent .div-content {
+    max-width: 100%;
+    margin: 0 0 0.75rem;
+}
+
+#div-intro p {
+    font-size: clamp(1rem, 1.7vw, 1.125rem);
+    line-height: 1.5;
+    margin: 0.4rem 0 0.2rem;
 }
 
 #div-intro {
-    margin:auto;
+    position: relative;
+    top: 42px;
 }
 
 #div-img {
-    display:block;
-    margin:auto;
-    width:fit-content;
+    display: block;
+    width: 100%;
 }
 
 #img-intro-container {
-    vertical-align:top;
-    display:inline-block;
-    text-align:left;
+    display: block;
+    text-align: center;
 }
 
 #img-intro {
-    max-width:100%;
+    display: block;
+    width: min(100%, 640px);
+    height: auto;
+    margin: 0 auto;
     z-index: 2;
+}
+
+#copyright {
+    margin: 0.45rem auto 0;
+    text-align: center;
+    font-size: clamp(0.72rem, 1.4vw, 0.9rem);
+    line-height: 1.25;
+    word-break: break-word;
 }
 
 /* Moon */
 .crescent-moon {
-	--w: 60px; /* Base Size */
-	--angle: -5deg; /* Rotation */
-	position: relative;
-	width: var(--w);
-	height: var(--w);
+    --w: 60px;
+    --angle: -5deg;
+    position: relative;
+    width: var(--w);
+    height: var(--w);
 }
 
 .crescent-moon::before {
-	content: "";
-	position: absolute;
-	top: 8.5%;
-	left: 30%;
-	width: calc(var(--w) / 1.4);
-	height: calc(var(--w) / 1.4);
-	border-radius: 50%;
-	/* Shape adjustment */
-	box-shadow: calc(var(--w) / (-6)) 0px 0px calc(var(--w) / 7) var(--sec-color);
-	transform: rotate(var(--angle));
+    content: "";
+    position: absolute;
+    top: 8.5%;
+    left: 30%;
+    width: calc(var(--w) / 1.4);
+    height: calc(var(--w) / 1.4);
+    border-radius: 50%;
+    box-shadow: calc(var(--w) / (-6)) 0px 0px calc(var(--w) / 7) var(--sec-color);
+    transform: rotate(var(--angle));
 }
 
 #moon {
-    position:relative;
-    left:7px;
+    position: relative;
+    left: 6px;
     animation: rise 1.7s ease-out forwards;
-    z-index:-1;
+    z-index: -1;
 }
-
 
 @keyframes rise {
     0% {
@@ -80,59 +105,43 @@
     }
 
     100% {
-        bottom: 0px;
+        bottom: 0;
     }
 }
 
 /* Hill */
 #hill {
-    position:absolute;
-    z-index:-1;
-    height: 1000px;
-    width: 1000px;
+    --hill-size: clamp(2200px, 430vw, 4200px);
+    position: absolute;
+    z-index: -1;
+    width: var(--hill-size);
+    height: var(--hill-size);
     background-color: var(--prim-color);
     border-radius: 50%;
-    right:-260px;
-    bottom:-320px;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    
+    left: 50%;
+    top: clamp(90px, 16vh, 170px);
+    transform: translateX(-50%);
 }
 
 @media only screen and (min-width:600px) {
     #main-page-container {
-        overflow:hidden;
-    }
-
-    h1 {
-        font-size:69px;
+        padding: 0.75rem 1.25rem 1rem;
     }
 
     #quote {
-        position: relative;
-        bottom: 30px;
+        width: min(88vw, 1040px);
     }
 
     #div-maincontent {
-        max-width:70%;
-        height:auto;
-        align-content: center;
-        margin:auto;
+        width: min(72vw, 920px);
     }
 
-    #img-intro-container {
-        vertical-align:top;
-        display:inline-block;
-        text-align:left;
-        margin: auto;
+    #div-intro {
+        top: 58px;
     }
 
-    #img-intro {
-        max-width:60%;
-        min-width:100%;
-        height:200px;
-        overflow-y:visible;
-        z-index: 1;
+    #moon {
+        left: -8px;
     }
 
     @keyframes rise {
@@ -141,19 +150,12 @@
         }
     
         100% {
-            bottom: -23px;
+            bottom: -18px;
         }
     }
 
-    #moon {
-        position:relative;
-        left: -8px;
-    }
-
     #hill {
-        width:2000px;
-        height:1900px;
-        top:300px;
-        right:-38px;
+        --hill-size: clamp(3600px, 330vw, 6500px);
+        top: clamp(135px, 17vh, 230px);
     }
 }

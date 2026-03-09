@@ -1,10 +1,11 @@
 import "../css/Dialog.css";
 import React, { useState } from "react";
+import { buildApiUrl } from "../utils/api";
 
 const DeleteSuccessStory = (value) => {
     const [result, setResult] = useState("");
     const deleteSS = async() => {
-        const response = await fetch(`http://localhost:3001/api/success-stories/${value._id}`, {
+        const response = await fetch(buildApiUrl(`/api/success-stories/${value._id}`), {
           method:"DELETE",
         });
         if (response.status === 200) {
@@ -13,7 +14,7 @@ const DeleteSuccessStory = (value) => {
           value.closeDialog();
         } else {
           console.log("DeletedSS Value: ", value); // DEBUG
-          console.log(response.text); // DEBUG
+          console.log(await response.text()); // DEBUG
           setResult("Error! Success Story couldn't be deleted");
         }
     };
