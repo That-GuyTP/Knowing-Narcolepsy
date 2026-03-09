@@ -26,12 +26,14 @@
     position: relative;
     z-index: 1;
     width: min(92vw, 760px);
-    margin: clamp(0.25rem, 1vh, 0.75rem) auto 0;
+    margin: clamp(0.9rem, 2.2vh, 1.4rem) auto 0;
+    display: grid;
+    gap: clamp(0.6rem, 1.6vh, 1rem);
 }
 
 #div-maincontent .div-content {
     max-width: 100%;
-    margin: 0 0 0.75rem;
+    margin: 0;
 }
 
 #div-intro p {
@@ -42,7 +44,6 @@
 
 #div-intro {
     position: relative;
-    top: 42px;
 }
 
 #div-img {
@@ -119,8 +120,9 @@
     background-color: var(--prim-color);
     border-radius: 50%;
     left: 50%;
-    top: clamp(90px, 16vh, 170px);
+    top: clamp(120px, 20vh, 220px);
     transform: translateX(-50%);
+    pointer-events: none;
 }
 
 @media only screen and (min-width:600px) {
@@ -134,10 +136,6 @@
 
     #div-maincontent {
         width: min(72vw, 920px);
-    }
-
-    #div-intro {
-        top: 58px;
     }
 
     #moon {
@@ -156,6 +154,6 @@
 
     #hill {
         --hill-size: clamp(3600px, 330vw, 6500px);
-        top: clamp(135px, 17vh, 230px);
+        top: clamp(165px, 21vh, 280px);
     }
 }
